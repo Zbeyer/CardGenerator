@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC311EAE1DD5070A00776205 /* cardEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC311EAD1DD5070A00776205 /* cardEditor.swift */; };
 		BC51C2BE1DD4EE7D0042BB5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51C2BD1DD4EE7D0042BB5B /* AppDelegate.swift */; };
 		BC51C2C01DD4EE7D0042BB5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51C2BF1DD4EE7D0042BB5B /* ViewController.swift */; };
 		BC51C2C31DD4EE7D0042BB5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC51C2C11DD4EE7D0042BB5B /* Main.storyboard */; };
@@ -14,6 +15,7 @@
 		BC51C2C81DD4EE7D0042BB5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC51C2C61DD4EE7D0042BB5B /* LaunchScreen.storyboard */; };
 		BC51C2D31DD4EE7D0042BB5B /* crdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51C2D21DD4EE7D0042BB5B /* crdTests.swift */; };
 		BC51C2DE1DD4EE7D0042BB5B /* crdUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51C2DD1DD4EE7D0042BB5B /* crdUITests.swift */; };
+		BC51C2EC1DD4FA110042BB5B /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51C2EB1DD4FA110042BB5B /* ApplicationState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC311EAD1DD5070A00776205 /* cardEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardEditor.swift; sourceTree = "<group>"; };
 		BC51C2BA1DD4EE7D0042BB5B /* crd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = crd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC51C2BD1DD4EE7D0042BB5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC51C2BF1DD4EE7D0042BB5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		BC51C2D91DD4EE7D0042BB5B /* crdUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = crdUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC51C2DD1DD4EE7D0042BB5B /* crdUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = crdUITests.swift; sourceTree = "<group>"; };
 		BC51C2DF1DD4EE7D0042BB5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC51C2EB1DD4FA110042BB5B /* ApplicationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				BC51C2BD1DD4EE7D0042BB5B /* AppDelegate.swift */,
+				BC51C2EB1DD4FA110042BB5B /* ApplicationState.swift */,
+				BC311EAD1DD5070A00776205 /* cardEditor.swift */,
 				BC51C2BF1DD4EE7D0042BB5B /* ViewController.swift */,
 				BC51C2C11DD4EE7D0042BB5B /* Main.storyboard */,
 				BC51C2C41DD4EE7D0042BB5B /* Assets.xcassets */,
@@ -262,7 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC311EAE1DD5070A00776205 /* cardEditor.swift in Sources */,
 				BC51C2C01DD4EE7D0042BB5B /* ViewController.swift in Sources */,
+				BC51C2EC1DD4FA110042BB5B /* ApplicationState.swift in Sources */,
 				BC51C2BE1DD4EE7D0042BB5B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,6 +520,7 @@
 				BC51C2E41DD4EE7D0042BB5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC51C2E51DD4EE7D0042BB5B /* Build configuration list for PBXNativeTarget "crdTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +529,7 @@
 				BC51C2E71DD4EE7D0042BB5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC51C2E81DD4EE7D0042BB5B /* Build configuration list for PBXNativeTarget "crdUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +538,7 @@
 				BC51C2EA1DD4EE7D0042BB5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
