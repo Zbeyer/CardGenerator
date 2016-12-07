@@ -167,8 +167,7 @@ class ViewController: UIViewController {
                                                  typeColor.rimColor.cgColor],
                                         width:4.0,
                                         radius:frame.height * 0.5)
-        
-        txtLabel.font = txtLabel.font.withSize(36)
+        txtLabel.font = UIFont(name: "Verdana-Bold", size: 36)
         txtLabel.backgroundColor = UIColor.clear
         txtLabel.textAlignment = .center
         txtLabel.textColor = typeColor.textColor
@@ -176,6 +175,7 @@ class ViewController: UIViewController {
         txtLabel.shadowOffset = CGSize(width:0, height:-2.0)
         txtLabel.layer.cornerRadius = frame.height * 0.5
         txtLabel.clipsToBounds = true;
+        
         return txtLabel
     }
     
@@ -232,24 +232,11 @@ class ViewController: UIViewController {
         //A Few Constants
         let bubblePadding:CGFloat = 6.0
         let bubbleSize:CGFloat = 48.0
-        let titleWidth:CGFloat = contentView.frame.width-bubbleSize*3-bubblePadding*4
-        
-        //Set Level
-        if ApplicationState.sharedInstance.cardLevel > 0 {
-            let lvl = ApplicationState.sharedInstance.cardLevel
-            let f:CGRect = CGRect(x:bubblePadding, y:bubblePadding, width:bubbleSize, height:bubbleSize)
-            let bg = self.txtBG(f:f, typeColor:typC, cornerRadius: f.height * 0.5)
-            let lvlLabel = txtLbl(frame: bg.bounds, typeColor:typC!)
-            lvlLabel.font = lvlLabel.font.withSize(40)
-            lvlLabel.text = "\(lvl)"
-            
-            bg.addSubview(lvlLabel)
-            contentView.addSubview(bg)
-        }
+        let titleWidth:CGFloat = contentView.frame.width-bubblePadding*2
         
         if (ApplicationState.sharedInstance.cardTitle != "") {
             let title = ApplicationState.sharedInstance.cardTitle
-            let f:CGRect = CGRect(x:bubbleSize + bubblePadding * 2, y:bubblePadding, width:titleWidth, height:bubbleSize)
+            let f:CGRect = CGRect(x:bubblePadding, y:bubblePadding, width:titleWidth, height:bubbleSize)
             let bg = self.txtBG(f:f, typeColor:typC!, cornerRadius: f.height * 0.5)
 
             let titleLabel = txtLbl(frame: bg.bounds, typeColor:typC!)
@@ -260,18 +247,6 @@ class ViewController: UIViewController {
         }
         
         
-        if (ApplicationState.sharedInstance.cardRoll > 0) {
-            let roll = ApplicationState.sharedInstance.cardRoll
-            let f:CGRect = CGRect(x:titleWidth + bubblePadding * 3 + bubbleSize, y:bubblePadding, width:bubbleSize*2, height:bubbleSize)
-            let bg = self.txtBG(f:f, typeColor:typC!, cornerRadius: f.height * 0.5)
-            
-            let rollLabel = txtLbl(frame: bg.bounds, typeColor:typC!)
-            rollLabel.text = "\(roll)"
-            rollLabel.font = rollLabel.font.withSize(24)
-            
-            bg.addSubview(rollLabel)
-            contentView.addSubview(bg)
-        }
         
         if (ApplicationState.sharedInstance.cardType != "") {
             let type = ApplicationState.sharedInstance.cardType
@@ -287,9 +262,9 @@ class ViewController: UIViewController {
         
         if (ApplicationState.sharedInstance.cardInfo != "") {
             let info = ApplicationState.sharedInstance.cardInfo
-            let bgf:CGRect = CGRect(x:bubblePadding + bubbleSize*0.5,
+            let bgf:CGRect = CGRect(x:bubblePadding,
                                   y:bubblePadding * 2 + bubbleSize,
-                                  width:contentView.frame.width - bubblePadding * 2 - bubbleSize,
+                                  width:contentView.frame.width - bubblePadding * 2,
                                   height:contentView.frame.height - bubbleSize * 2 - bubblePadding * 4)
             let bg = self.txtBG(f:bgf, typeColor:typC!)
             bg.layer.cornerRadius = 8.0
@@ -316,7 +291,7 @@ class ViewController: UIViewController {
             infoView.clipsToBounds = true
             infoView.backgroundColor = UIColor.clear
             infoView.textColor = typC?.textColor
-            infoView.font = infoView.font?.withSize(36)
+            infoView.font = UIFont(name: "Verdana", size: 36)
             
             bg.addSubview(infoView)
             
