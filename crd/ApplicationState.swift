@@ -33,19 +33,10 @@ enum TypeColorIndex: Int {
 class ApplicationState {
     static let sharedInstance = ApplicationState()
     public var cardTitle:String=""  //Title of the card
-    public var cardLevel:Int = 0    //Generic Attribute Level
     public var cardInfo:String=""   //Body Text
     public var cardType:String=""   //Type or category of card
     public var cardImage:UIImage?   //Background Portrait image
     public var typeColorIndex:TypeColorIndex = .grey
-    
-    
-    public var cardRoll:Int {
-        //Generic Attribute computed as 3 times the card's level
-        get {
-            return self.cardLevel * 3
-        }
-    }
     
     /**
      *  Computed Property: 
