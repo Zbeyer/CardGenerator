@@ -93,11 +93,20 @@ class CardEditor: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        self.didEdit()
+
+        super.viewWillDisappear(animated)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         if(ApplicationState.sharedInstance.cardInfo != "") {
             self.info.text = ApplicationState.sharedInstance.cardInfo
+//            self.info.textContainer.maximumNumberOfLines = 7;
+//            self.info.textContainer.lineBreakMode = NSLineBreakMode.byTruncatingTail;
         }
         
         if (ApplicationState.sharedInstance.cardTitle != "") {

@@ -27,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="-1202" y="329"/>
         </scene>
-        <!--View Controller-->
+        <!--Card Preview-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="crd" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Card Preview" id="BYZ-38-t0r" customClass="ViewController" customModule="crd" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -40,7 +40,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C5u-cj-ELB">
-                                <rect key="frame" x="0.0" y="64" width="375" height="468"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h89-d0-kDx">
@@ -50,37 +50,30 @@
                                     <constraint firstAttribute="width" secondItem="h89-d0-kDx" secondAttribute="height" multiplier="136:185" id="9GX-MM-fFZ"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BkZ-0n-BQo">
-                                <rect key="frame" x="257" y="540" width="102" height="30"/>
-                                <state key="normal" title="Edit Properties"/>
-                                <connections>
-                                    <segue destination="DFe-IA-RL2" kind="show" id="MTE-S0-fAw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mu3-Dy-sbz">
-                                <rect key="frame" x="15" y="540" width="79" height="30"/>
-                                <state key="normal" title="Save Image"/>
-                                <connections>
-                                    <action selector="onSaveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tv3-Ad-Ikn"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="C5u-cj-ELB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="01X-OV-GyQ"/>
                             <constraint firstItem="h89-d0-kDx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="74h-yL-Wdr"/>
-                            <constraint firstItem="BkZ-0n-BQo" firstAttribute="top" secondItem="C5u-cj-ELB" secondAttribute="bottom" constant="8" id="C9m-al-ie4"/>
-                            <constraint firstItem="C5u-cj-ELB" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="DSd-Y6-Tii"/>
-                            <constraint firstItem="C5u-cj-ELB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N7x-l9-hKD"/>
-                            <constraint firstItem="C5u-cj-ELB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="NUl-xH-Dkc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="h89-d0-kDx" secondAttribute="trailing" priority="750" id="TKz-wQ-zMx"/>
-                            <constraint firstItem="mu3-Dy-sbz" firstAttribute="top" secondItem="h89-d0-kDx" secondAttribute="bottom" constant="8" id="dIf-wW-tOe"/>
-                            <constraint firstItem="mu3-Dy-sbz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-1" id="ggP-uW-HH0"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="BkZ-0n-BQo" secondAttribute="trailing" id="oxm-pR-pm9"/>
+                            <constraint firstItem="C5u-cj-ELB" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="hm0-af-yp7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="C5u-cj-ELB" secondAttribute="bottom" id="hnH-cD-SPF"/>
                             <constraint firstItem="h89-d0-kDx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ubk-9s-z0X"/>
-                            <constraint firstItem="BkZ-0n-BQo" firstAttribute="top" secondItem="h89-d0-kDx" secondAttribute="bottom" constant="8" id="ujf-ep-3xt"/>
+                            <constraint firstItem="C5u-cj-ELB" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="y4b-p2-KU0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="X3n-X6-LRC"/>
+                    <navigationItem key="navigationItem" id="X3n-X6-LRC">
+                        <barButtonItem key="leftBarButtonItem" title="Save To Disk" id="Jly-iR-dc5">
+                            <connections>
+                                <action selector="onSaveImage:" destination="BYZ-38-t0r" id="g6Z-yT-MrG"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Edit Card" id="sEh-xJ-D8j">
+                            <connections>
+                                <segue destination="DFe-IA-RL2" kind="show" id="Kk8-p6-yjS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="previewImage" destination="h89-d0-kDx" id="Vf0-w0-yVz"/>
                     </connections>
@@ -92,7 +85,7 @@
         <!--Card Editor-->
         <scene sceneID="5nz-yr-Qcn">
             <objects>
-                <viewController id="DFe-IA-RL2" customClass="CardEditor" customModule="crd" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Card Editor" id="DFe-IA-RL2" customClass="CardEditor" customModule="crd" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dFT-D3-COM"/>
                         <viewControllerLayoutGuide type="bottom" id="gkz-Ji-PL7"/>
@@ -143,13 +136,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LH6-LL-ZS0">
-                                <rect key="frame" x="16" y="380" width="34" height="30"/>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <action selector="onDone:" destination="DFe-IA-RL2" eventType="touchUpInside" id="6eA-fD-aGe"/>
-                                </connections>
-                            </button>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="0OT-VS-f1M">
                                 <rect key="frame" x="175" y="379" width="94" height="29"/>
                                 <connections>
@@ -185,8 +171,6 @@
                             <constraint firstAttribute="leadingMargin" secondItem="rxR-fg-Fd9" secondAttribute="leading" id="s0T-S3-wSe"/>
                             <constraint firstItem="Tni-MN-xbF" firstAttribute="centerX" secondItem="6hF-ET-Eh9" secondAttribute="centerX" id="tSH-vA-meH"/>
                             <constraint firstItem="tiW-YL-13Q" firstAttribute="top" secondItem="Tni-MN-xbF" secondAttribute="bottom" constant="8" id="ue8-hF-WJT"/>
-                            <constraint firstItem="LH6-LL-ZS0" firstAttribute="top" secondItem="tiW-YL-13Q" secondAttribute="bottom" constant="8" id="xLd-mi-6um"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="LH6-LL-ZS0" secondAttribute="leading" id="yRJ-Hd-pvc"/>
                         </constraints>
                     </view>
                     <connections>
