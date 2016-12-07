@@ -10,15 +10,12 @@ import UIKit
 
 class CardEditor: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     @IBOutlet weak var fieldType: UITextField!
-    @IBOutlet weak var fieldLVL: UITextField!
     @IBOutlet weak var typeColor: UILabel!
     @IBOutlet weak var fieldTitle: UITextField!
-    @IBOutlet weak var lRoll: UILabel!
     @IBOutlet weak var info: UITextView!
     @IBOutlet weak var typeColorStep: UIStepper!
     @IBOutlet weak var thumbnail: UIImageView!
     @IBAction func onDone(_ sender: Any) {
-        self.fieldLVL.endEditing(true)
         self.fieldTitle.endEditing(true)
         self.info.endEditing(true)
         self.didEdit()
@@ -60,20 +57,6 @@ class CardEditor: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     
     @IBAction func didEdit() {
         
-        
-        if let lvlString = self.fieldLVL.text {
-            if var lvl = Int(lvlString) {
-                
-                if lvl < 0 {
-                    lvl = 0
-                }
-                
-                ApplicationState.sharedInstance.cardLevel = Int(lvl)
-                let roll = ApplicationState.sharedInstance.cardRoll
-                self.lRoll.text = "(\(roll))"
-            }
-        }
-        
         if let titleString = self.fieldTitle.text {
             self.fieldTitle.text = titleString.uppercased()
             ApplicationState.sharedInstance.cardTitle = titleString.uppercased()
@@ -88,7 +71,6 @@ class CardEditor: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     }
     
     @IBAction func backgroundTaped(_ sender: Any) {
-        self.fieldLVL.endEditing(true)
         self.fieldTitle.endEditing(true)
         self.info.endEditing(true)
         
@@ -124,13 +106,6 @@ class CardEditor: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         
         if (ApplicationState.sharedInstance.cardType != "") {
             self.fieldType.text = ApplicationState.sharedInstance.cardType
-        }
-        
-        if (ApplicationState.sharedInstance.cardLevel > 0) {
-            let lvl = ApplicationState.sharedInstance.cardLevel
-            let roll = ApplicationState.sharedInstance.cardRoll
-            self.fieldLVL.text = "\(lvl)"
-            self.lRoll.text = "(\(roll))"
         }
         
         if ((ApplicationState.sharedInstance.cardImage) != nil) {

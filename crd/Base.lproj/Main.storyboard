@@ -101,32 +101,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="LVL" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DOn-Jo-fnf">
-                                <rect key="frame" x="16" y="72" width="48" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="90S-um-cI2"/>
-                                    <constraint firstAttribute="width" constant="48" id="RBQ-jc-4Ch"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TITLE" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rxR-fg-Fd9">
-                                <rect key="frame" x="72" y="72" width="231" height="30"/>
+                                <rect key="frame" x="16" y="72" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROLL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQn-IC-yPL">
-                                <rect key="frame" x="311" y="77" width="48" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="4Ie-S0-YgS"/>
-                                    <constraint firstAttribute="width" constant="48" id="b24-xG-sPo"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tni-MN-xbF">
                                 <rect key="frame" x="16" y="110" width="343" height="224"/>
                                 <constraints>
@@ -186,39 +166,33 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pRj-dU-6T4" firstAttribute="top" secondItem="byS-n9-jcB" secondAttribute="bottom" constant="8" id="0Mg-WW-pkJ"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="DOn-Jo-fnf" secondAttribute="leading" id="0bp-Mz-Cim"/>
                             <constraint firstAttribute="leadingMargin" secondItem="tiW-YL-13Q" secondAttribute="leading" id="30S-Wp-g9S"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="MQn-IC-yPL" secondAttribute="trailing" id="7NE-Nh-HFd"/>
                             <constraint firstItem="Z6T-Oa-aAj" firstAttribute="top" secondItem="0OT-VS-f1M" secondAttribute="bottom" constant="8" id="BsH-LS-X1S"/>
-                            <constraint firstItem="rxR-fg-Fd9" firstAttribute="leading" secondItem="DOn-Jo-fnf" secondAttribute="trailing" constant="8" id="Gyk-bU-LDQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Tni-MN-xbF" secondAttribute="trailing" id="Jea-zc-wfp"/>
                             <constraint firstItem="Z6T-Oa-aAj" firstAttribute="width" secondItem="0OT-VS-f1M" secondAttribute="width" id="M8w-5z-M6x"/>
                             <constraint firstItem="pRj-dU-6T4" firstAttribute="centerX" secondItem="byS-n9-jcB" secondAttribute="centerX" id="NHk-Xe-wsW"/>
-                            <constraint firstItem="MQn-IC-yPL" firstAttribute="top" secondItem="dFT-D3-COM" secondAttribute="bottom" constant="13" id="cts-g1-vvP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rxR-fg-Fd9" secondAttribute="trailing" id="bPP-gt-dJw"/>
                             <constraint firstItem="byS-n9-jcB" firstAttribute="leading" secondItem="0OT-VS-f1M" secondAttribute="trailing" constant="8" id="czC-hp-3vM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="byS-n9-jcB" secondAttribute="trailing" id="foi-4C-N1f"/>
                             <constraint firstItem="rxR-fg-Fd9" firstAttribute="top" secondItem="dFT-D3-COM" secondAttribute="bottom" constant="8" id="fpF-5q-y48"/>
                             <constraint firstItem="0OT-VS-f1M" firstAttribute="top" secondItem="tiW-YL-13Q" secondAttribute="bottom" constant="7" id="g5Y-Zv-Af3"/>
                             <constraint firstItem="Tni-MN-xbF" firstAttribute="top" secondItem="rxR-fg-Fd9" secondAttribute="bottom" constant="8" id="j4f-V4-2jq"/>
-                            <constraint firstItem="DOn-Jo-fnf" firstAttribute="top" secondItem="dFT-D3-COM" secondAttribute="bottom" constant="8" id="j61-4t-Ytg"/>
                             <constraint firstItem="Z6T-Oa-aAj" firstAttribute="centerX" secondItem="0OT-VS-f1M" secondAttribute="centerX" id="kbV-Ig-HKC"/>
                             <constraint firstItem="byS-n9-jcB" firstAttribute="top" secondItem="Tni-MN-xbF" secondAttribute="bottom" constant="8" id="mLf-nW-Yk7"/>
                             <constraint firstItem="byS-n9-jcB" firstAttribute="leading" secondItem="tiW-YL-13Q" secondAttribute="trailing" constant="8" id="oUt-Cd-7kG"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Tni-MN-xbF" secondAttribute="leading" id="pPe-dp-qNc"/>
                             <constraint firstItem="pRj-dU-6T4" firstAttribute="width" secondItem="byS-n9-jcB" secondAttribute="width" id="qBC-5Y-aj8"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="rxR-fg-Fd9" secondAttribute="leading" id="s0T-S3-wSe"/>
                             <constraint firstItem="Tni-MN-xbF" firstAttribute="centerX" secondItem="6hF-ET-Eh9" secondAttribute="centerX" id="tSH-vA-meH"/>
                             <constraint firstItem="tiW-YL-13Q" firstAttribute="top" secondItem="Tni-MN-xbF" secondAttribute="bottom" constant="8" id="ue8-hF-WJT"/>
-                            <constraint firstItem="MQn-IC-yPL" firstAttribute="leading" secondItem="rxR-fg-Fd9" secondAttribute="trailing" constant="8" id="wIl-UY-XVD"/>
                             <constraint firstItem="LH6-LL-ZS0" firstAttribute="top" secondItem="tiW-YL-13Q" secondAttribute="bottom" constant="8" id="xLd-mi-6um"/>
                             <constraint firstAttribute="leadingMargin" secondItem="LH6-LL-ZS0" secondAttribute="leading" id="yRJ-Hd-pvc"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="fieldLVL" destination="DOn-Jo-fnf" id="dPY-sS-6zd"/>
                         <outlet property="fieldTitle" destination="rxR-fg-Fd9" id="kVP-gO-uWd"/>
                         <outlet property="fieldType" destination="tiW-YL-13Q" id="hUD-gu-e8d"/>
                         <outlet property="info" destination="Tni-MN-xbF" id="qgz-12-D0W"/>
-                        <outlet property="lRoll" destination="MQn-IC-yPL" id="0yC-Co-K6D"/>
                         <outlet property="thumbnail" destination="byS-n9-jcB" id="rtf-0C-tst"/>
                         <outlet property="typeColor" destination="Z6T-Oa-aAj" id="a37-fJ-n2E"/>
                         <outlet property="typeColorStep" destination="0OT-VS-f1M" id="Ls2-eV-3WQ"/>
