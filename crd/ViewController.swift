@@ -136,12 +136,29 @@ class ViewController: UIViewController {
     
     @IBAction func onSaveImage(_ sender: Any) {
         //TODO:ZBEYER Display an alert to confirm the save and notify on success / failure to write the image...
-        UIImageWriteToSavedPhotosAlbum(self.renderedImage, nil, nil, nil);
-
+        UIImageWriteToSavedPhotosAlbum(self.renderedImage,  self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil);
+    }
+    
+    func image(_ image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            // we got back an error!
+            let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        } else {
+            let ac = UIAlertController(title: "Saved!", message: "Your altered image has been saved to your photos.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        }
+        
+        //For debugging purposes: I need the path to my image directory
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsDirectory = paths[0]
+        print(documentsDirectory);
     }
     
     /**
-     *  Helper to build and set a few options for a 
+     *  Helper to build and set a few options for a
      *  background of a text label or view
      */
     func txtBG(f:CGRect, typeColor:TypeColor, cornerRadius:CGFloat = 8.0) -> UIView {
