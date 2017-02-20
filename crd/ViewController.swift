@@ -151,10 +151,14 @@ class ViewController: UIViewController {
             present(ac, animated: true)
         }
         
+        #if DEBUG
+
         //For debugging purposes: I need the path to my image directory
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let documentsDirectory = paths[0]
-        print(documentsDirectory);
+            print("\nDocuments: %@", documentsDirectory);
+        #endif
+
     }
     
     /**
