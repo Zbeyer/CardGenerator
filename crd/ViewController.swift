@@ -283,10 +283,10 @@ class ViewController: UIViewController {
         
         if (ApplicationState.sharedInstance.cardInfo != "") {
             let info = ApplicationState.sharedInstance.cardInfo
-            let bgf:CGRect = CGRect(x:bubblePadding + bubbleSize * 0.5,
-                                  y:bubblePadding * 2 + bubbleSize * 9,
-                                  width:contentView.frame.width - bubblePadding * 2 - bubbleSize,
-                                  height:contentView.frame.height - bubbleSize * 10 - bubblePadding * 4)
+            let bgf:CGRect = CGRect(x:bubblePadding,
+                                  y:bubblePadding * 2 + bubbleSize,
+                                  width:contentView.frame.width - bubblePadding * 2,
+                                  height:contentView.frame.height - bubbleSize * 2 - bubblePadding * 4)
             let bg = self.txtBG(f:bgf, typeColor:typC!)
             bg.layer.cornerRadius = 8.0
             typC?.applyTextBG(view: bg, cornerRadius: 8.0)
@@ -312,9 +312,9 @@ class ViewController: UIViewController {
             infoView.clipsToBounds = true
             infoView.backgroundColor = UIColor.clear
             infoView.textColor = typC?.textColor
-            infoView.font = UIFont(name: "Verdana", size: 36)
+            infoView.font = UIFont(name: "Verdana", size: 28)
             
-            infoView.textContainer.maximumNumberOfLines = 10;
+            infoView.textContainer.maximumNumberOfLines = 32;
             
             /**
              *  For some reason, toggling isScrollEnabled is the only way
